@@ -187,6 +187,10 @@ footer .content a img {
 }
 
 /* 埋め込みサイト */
+.color_red {
+  color: #FF0000;
+}
+
 .frame {
   width: 800px;
   display: inline-block;
