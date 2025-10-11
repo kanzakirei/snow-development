@@ -1,0 +1,271 @@
+/* 共通 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+}
+
+body {
+  font-family: MOBOFont;
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 0 8px;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  right: 0;
+  z-index: 30;
+}
+
+header a img {
+  width: auto;
+  height: 100%;
+  aspect-ratio: 2/1;
+}
+
+main {
+  padding-top: 50px;
+  background-color: #333;
+}
+
+footer {
+  background-color: white;
+  padding-top: 15px;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+p {
+  padding: 5px;
+}
+
+/* ページ汎用 */
+h1.center,
+h2.center,
+h3.center,
+p.center,
+div.center {
+  text-align: center;
+}
+
+h1.left,
+h2.left,
+h3.left,
+p.left,
+div.left {
+  text-align: left;
+}
+
+.line {
+  width: 100%;
+  border-bottom: 2px solid #333;
+}
+
+#snowParticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.horizontal li {
+  display: inline-block;
+  padding: 0px 15px 30px;
+}
+
+@font-face {
+  font-family: 'MOBOFont';
+  src: url("../font/MOBO-SemiBold.otf");
+}
+
+.horizontal li {
+  display: inline-block;
+  padding: 0px 15px 30px;
+}
+
+/* コンテンツ */
+.content {
+  text-align: center;
+}
+
+footer .content img {
+  max-width: 400px;
+  width: 100%;
+  aspect-ratio: 2/1;
+}
+
+footer .content a img {
+  width: 40px;
+  aspect-ratio: 2/1;
+}
+
+.fadeIn {
+  animation: fadeInAnime .3s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeInAnime {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation: fadeOutAnime .3s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeOutAnime {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 記事 */
+.article {
+  margin: 0px auto 0px;
+  box-sizing: border-box;
+}
+
+.article-title {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #333;
+  clear: both;
+  margin-right: 12px;
+  margin-left: 12px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.article-list {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.article-list li {
+  border-bottom: 1px dotted #333;
+  padding: 8px 0px;
+  margin: 0px 12px;
+}
+
+.article-list li:last-child {
+  border-bottom: medium none;
+}
+
+.article-list-date {
+  padding: 0px 8px;
+  color: #666666;
+}
+
+details[open] summary {
+  border-bottom: 1px dotted #333;
+  margin: 0px 12px;
+}
+
+details summary::before {
+  content: "▼";
+}
+
+details[open] summary::before {
+  content: "▲";
+}
+
+summary {
+  display: block;
+  list-style: none;
+  text-align: center;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ロード画面 */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: black;
+  text-align: center;
+  color: white;
+  visibility: visible;
+  opacity: 1;
+}
+
+#loadingLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loadingLogo img {
+  width: 80%;
+  height: auto;
+}
+
+/* 埋め込みサイト */
+.frame {
+  width: 800px;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  /*color: #6091d3;*/
+  background: white;
+  border: solid 3px #333;
+  border-radius: 10px;
+}
+
+.iframe_block {
+  width: 755px;
+  height: 370px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.iframe_block iframe {
+  width: 1010px;
+  height: 1335px;
+  margin-left: -250px;
+}
