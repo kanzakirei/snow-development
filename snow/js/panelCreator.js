@@ -59,12 +59,12 @@ function createIframeBlock(_parent, _url) {
 	div.classList.add("iframe_block");
 	_parent.appendChild(div);
 
+	OpenLoadingScreen();
 	let iframe = document.createElement("iframe");
 	iframe.src = _url+"#tenki-tbl-margin";
 	iframe.frameBorder = "0";
 	iframe.scrolling = "no";
-	div.appendChild(iframe);
-
-	OpenLoadingScreen();
+	iframe.loading = "lazy";
 	iframe.onload = CloseLoadingScreen();
+	div.appendChild(iframe);
 }
