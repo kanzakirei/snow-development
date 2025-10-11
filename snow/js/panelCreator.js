@@ -64,4 +64,7 @@ function createIframeBlock(_parent, _url) {
 	iframe.frameBorder = "0";
 	iframe.scrolling = "no";
 	div.appendChild(iframe);
+
+	OpenLoadingScreen();
+	iframe.onload = CloseLoadingScreen();
 }
