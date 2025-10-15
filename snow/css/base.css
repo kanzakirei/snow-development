@@ -5,13 +5,12 @@
 }
 
 html {
-  -webkit-text-size-adjust: 100%;
   background-color: black;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: MOBOFont;
-  background-color: black;
 }
 
 p {
